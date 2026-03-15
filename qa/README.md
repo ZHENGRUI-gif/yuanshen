@@ -1,7 +1,7 @@
-# HSR QA Automation (Skeleton) / 星穹铁道测试自动化（骨架）
+# QA / 自动化测试
 
-本目录提供一套轻量、无第三方依赖（仅 Python 标准库）的自动化测试骨架，用于类似《崩坏：星穹铁道》的客户端进行端到端的健康检查/冒烟/回归验证。
-This folder contains a lightweight, dependency-free (stdlib-only) automation harness intended for end-to-end sanity/smoke/regression checks of a game client like Honkai: Star Rail.
+项目总览与快速开始已放到仓库根目录 `README.md`，与 `qa/` 同级。
+The project overview and quick start are in the repo root `README.md` (same level as `qa/`).
 
 ## 能力范围 / What It Can Do (No Extra Tools)
 - 启动/退出游戏进程（Windows PC）。 / Start/stop the game process (PC Windows).
