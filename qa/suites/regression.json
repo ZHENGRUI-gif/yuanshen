@@ -1,0 +1,17 @@
+{
+  "id": "regression",
+  "name": "PC Regression (Template)",
+  "steps": [
+    {
+      "id": "collect_logs",
+      "type": "logs.collect",
+      "params": {}
+    },
+    {
+      "id": "scan_crash_signatures",
+      "type": "logs.scan_crash",
+      "params": {}
+    }
+  ]
+}
+

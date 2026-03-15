@@ -1,0 +1,24 @@
+{
+  "id": "smoke",
+  "name": "PC Smoke Suite",
+  "steps": [
+    {
+      "id": "pc_launch_and_idle",
+      "type": "pc.launch_and_idle",
+      "params": {
+        "runtime_sec": 120
+      }
+    },
+    {
+      "id": "collect_logs",
+      "type": "logs.collect",
+      "params": {}
+    },
+    {
+      "id": "scan_crash_signatures",
+      "type": "logs.scan_crash",
+      "params": {}
+    }
+  ]
+}
+

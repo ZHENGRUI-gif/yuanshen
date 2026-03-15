@@ -1,0 +1,55 @@
+{
+  "suite_id": "smoke",
+  "suite_name": "PC Smoke Suite",
+  "ok": false,
+  "started_at": "2026-03-15T14:58:31.725574+00:00",
+  "finished_at": "2026-03-15T14:58:31.726577+00:00",
+  "artifacts": {
+    "run_dir": "qa\\out\\20260315_225831"
+  },
+  "steps": [
+    {
+      "id": "pc_launch_and_idle",
+      "type": "pc.launch_and_idle",
+      "ok": false,
+      "started_at": "2026-03-15T14:58:31.725574+00:00",
+      "finished_at": "2026-03-15T14:58:31.725574+00:00",
+      "details": {
+        "ok": false,
+        "reason": "game_exe not found",
+        "game_exe": "C:\\Path\\To\\StarRail.exe"
+      }
+    },
+    {
+      "id": "collect_logs",
+      "type": "logs.collect",
+      "ok": true,
+      "started_at": "2026-03-15T14:58:31.725574+00:00",
+      "finished_at": "2026-03-15T14:58:31.726577+00:00",
+      "details": {
+        "ok": true,
+        "roots": [
+          "C:/Path/To/GameFolder/logs",
+          "C:/Users/争瑞/AppData/LocalLow/miHoYo/SomeGame/logs"
+        ],
+        "matched": 0,
+        "copied": 0,
+        "total_mb": 0.0,
+        "dest": "qa\\out\\20260315_225831\\artifacts\\logs"
+      }
+    },
+    {
+      "id": "scan_crash_signatures",
+      "type": "logs.scan_crash",
+      "ok": true,
+      "started_at": "2026-03-15T14:58:31.726577+00:00",
+      "finished_at": "2026-03-15T14:58:31.726577+00:00",
+      "details": {
+        "ok": true,
+        "signature_hits": [],
+        "crash_files": [],
+        "note": "ok=false when crash signatures or dump-like files are detected"
+      }
+    }
+  ]
+}

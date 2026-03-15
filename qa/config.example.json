@@ -1,0 +1,42 @@
+{
+  "project": {
+    "name": "Honkai Star Rail",
+    "build": "unknown",
+    "environment": "test"
+  },
+  "pc": {
+    "game_exe": "C:/Path/To/StarRail.exe",
+    "working_dir": "C:/Path/To/GameFolder",
+    "args": [],
+    "startup_timeout_sec": 60,
+    "runtime_smoke_sec": 120,
+    "kill_timeout_sec": 10
+  },
+  "logs": {
+    "roots": [
+      "C:/Path/To/GameFolder/logs",
+      "C:/Users/%USERNAME%/AppData/LocalLow/miHoYo/SomeGame/logs"
+    ],
+    "include_globs": [
+      "*.log",
+      "*.txt",
+      "*.dmp"
+    ],
+    "max_total_mb": 50
+  },
+  "crash_signatures": {
+    "strings": [
+      "CRASH",
+      "FATAL",
+      "Unhandled exception",
+      "UnityPlayer.dll",
+      "stack overflow",
+      "access violation"
+    ],
+    "file_globs": [
+      "*.dmp",
+      "*crash*"
+    ]
+  }
+}
+

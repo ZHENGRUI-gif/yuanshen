@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QA Report - PC Smoke Suite</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; margin: 24px; }
+    .header { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+    .badge { padding: 4px 10px; border-radius: 999px; color: white; font-weight: 700; }
+    .pass { background: #177245; }
+    .fail { background: #b00020; }
+    table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+    th, td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+    th { background: #f6f6f6; text-align: left; }
+    td pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
+    .hint { color: #666; }
+    .pass, .fail { color: white; }
+    td.pass, td.fail { font-weight: 700; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 style="margin:0;">QA Report</h1>
+    <span class="badge fail">FAIL</span>
+    <div class="hint">Started: 2026-03-15T14:58:31.725574+00:00 | Finished: 2026-03-15T14:58:31.726577+00:00</div>
+  </div>
+  <h2 style="margin-top:16px;">Suite</h2>
+  <div><b>ID:</b> smoke</div>
+  <div><b>Name:</b> PC Smoke Suite</div>
+  <h2 style="margin-top:16px;">Artifacts</h2>
+  <ul>
+    <li><b>run_dir:</b> qa\out\20260315_225831</li>
+  </ul>
+  <h2 style="margin-top:16px;">Steps</h2>
+  <table>
+    <thead><tr><th>Step</th><th>Type</th><th>Status</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>pc_launch_and_idle</td><td>pc.launch_and_idle</td><td class='fail'>FAIL</td><td><pre>{
+  &quot;ok&quot;: false,
+  &quot;reason&quot;: &quot;game_exe not found&quot;,
+  &quot;game_exe&quot;: &quot;C:\\Path\\To\\StarRail.exe&quot;
+}</pre></td></tr><tr><td>collect_logs</td><td>logs.collect</td><td class='pass'>PASS</td><td><pre>{
+  &quot;ok&quot;: true,
+  &quot;roots&quot;: [
+    &quot;C:/Path/To/GameFolder/logs&quot;,
+    &quot;C:/Users/争瑞/AppData/LocalLow/miHoYo/SomeGame/logs&quot;
+  ],
+  &quot;matched&quot;: 0,
+  &quot;copied&quot;: 0,
+  &quot;total_mb&quot;: 0.0,
+  &quot;dest&quot;: &quot;qa\\out\\20260315_225831\\artifacts\\logs&quot;
+}</pre></td></tr><tr><td>scan_crash_signatures</td><td>logs.scan_crash</td><td class='pass'>PASS</td><td><pre>{
+  &quot;ok&quot;: true,
+  &quot;signature_hits&quot;: [],
+  &quot;crash_files&quot;: [],
+  &quot;note&quot;: &quot;ok=false when crash signatures or dump-like files are detected&quot;
+}</pre></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
