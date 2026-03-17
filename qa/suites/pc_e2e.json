@@ -1,0 +1,49 @@
+{
+  "id": "pc_e2e",
+  "name": "PC E2E (Login/Main/Battle/Gacha/Reconnect)",
+  "steps": [
+    {
+      "id": "pc_launch_and_idle_short",
+      "type": "pc.launch_and_idle",
+      "params": {
+        "runtime_sec": 10
+      }
+    },
+    {
+      "id": "pc_e2e_flow",
+      "type": "pc.ahk.run_script",
+      "params": {
+        "script": "qa/flows/pc_e2e.ahk",
+        "timeout_sec": 900,
+        "args": []
+      }
+    },
+    {
+      "id": "net_disable",
+      "type": "pc.network.toggle_interface",
+      "params": {
+        "name": "WLAN",
+        "state": "disable"
+      }
+    },
+    {
+      "id": "net_enable",
+      "type": "pc.network.toggle_interface",
+      "params": {
+        "name": "WLAN",
+        "state": "enable"
+      }
+    },
+    {
+      "id": "collect_logs",
+      "type": "logs.collect",
+      "params": {}
+    },
+    {
+      "id": "scan_crash_signatures",
+      "type": "logs.scan_crash",
+      "params": {}
+    }
+  ]
+}
+

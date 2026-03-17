@@ -11,6 +11,8 @@ from hsrqa.core.config import Config
 from hsrqa.core.report import StepResult, SuiteResult, write_html, write_json
 from hsrqa.steps.logs import collect_logs_step, scan_crash_step
 from hsrqa.steps.pc import launch_and_idle_step
+from hsrqa.steps.pc_network import toggle_interface_step
+from hsrqa.steps.pc_ui_ahk import ahk_run_script_step
 
 
 def _now_iso() -> str:
@@ -24,6 +26,8 @@ class Runner:
 
         self.step_registry: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {
             "pc.launch_and_idle": self._wrap(launch_and_idle_step),
+            "pc.ahk.run_script": self._wrap(ahk_run_script_step),
+            "pc.network.toggle_interface": self._wrap(toggle_interface_step),
             "logs.collect": self._wrap(collect_logs_step),
             "logs.scan_crash": self._wrap(scan_crash_step),
         }

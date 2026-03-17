@@ -7,10 +7,14 @@
   "pc": {
     "game_exe": "C:/Path/To/StarRail.exe",
     "working_dir": "C:/Path/To/GameFolder",
+    "ahk_exe": "C:/Path/To/AutoHotkey64.exe",
     "args": [],
     "startup_timeout_sec": 60,
     "runtime_smoke_sec": 120,
     "kill_timeout_sec": 10
+  },
+  "network": {
+    "allow_disruptive": false
   },
   "logs": {
     "roots": [
@@ -39,4 +43,3 @@
     ]
   }
 }
-
